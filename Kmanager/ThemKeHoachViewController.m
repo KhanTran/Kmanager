@@ -66,7 +66,7 @@
         [self.iconNhanVien setHidden:YES];
         [self.iconBatDau setHidden:YES];
         [self.iconKetThuc setHidden:YES];
-        
+        [self.btnAddEdit setTitle:@"Sửa"];
         
         [self.tfPlan setUserInteractionEnabled:NO];
         self.lblCustomer.text = [NSString stringWithFormat:@"%@", [_dicKehoach objectForKey:@"namestore"]];
@@ -93,6 +93,8 @@
         [self.btnCustomer setEnabled:YES];
         [self.fromDate setEnabled:YES];
         [self.toDate setEnabled:YES];
+        [self.btnAddEdit setTitle:@"Lưu"];
+
 
     }
 }
