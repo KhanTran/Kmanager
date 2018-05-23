@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HomeCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cricleWhite" translatesAutoresizingMaskIntoConstraints="NO" id="CUk-gQ-KP0">
+                        <rect key="frame" x="25" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="CUk-gQ-KP0" secondAttribute="height" multiplier="8:8" id="22e-A5-hYt"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings" translatesAutoresizingMaskIntoConstraints="NO" id="gNw-3i-wZB">
+                        <rect key="frame" x="40" y="23" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gNw-3i-wZB" secondAttribute="height" multiplier="1:1" id="vVP-p1-Zgy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tra cứu sản phẩm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiF-jH-a0T">
+                        <rect key="frame" x="10" y="93" width="110.5" height="37"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="gNw-3i-wZB" firstAttribute="top" secondItem="CUk-gQ-KP0" secondAttribute="top" constant="15" id="20l-wj-T2l"/>
+                <constraint firstAttribute="trailing" secondItem="fiF-jH-a0T" secondAttribute="trailing" constant="10" id="7dD-Jk-v2D"/>
+                <constraint firstAttribute="bottom" secondItem="fiF-jH-a0T" secondAttribute="bottom" id="8tP-dY-dxB"/>
+                <constraint firstItem="CUk-gQ-KP0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="25" id="BEf-i7-Stb"/>
+                <constraint firstItem="gNw-3i-wZB" firstAttribute="centerY" secondItem="CUk-gQ-KP0" secondAttribute="centerY" id="ByQ-YE-CrW"/>
+                <constraint firstItem="fiF-jH-a0T" firstAttribute="top" secondItem="CUk-gQ-KP0" secondAttribute="bottom" constant="5" id="IA9-oJ-oiR"/>
+                <constraint firstItem="fiF-jH-a0T" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KiV-K9-MF5"/>
+                <constraint firstItem="gNw-3i-wZB" firstAttribute="centerX" secondItem="CUk-gQ-KP0" secondAttribute="centerX" id="OaO-xT-WGG"/>
+                <constraint firstItem="CUk-gQ-KP0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="UUZ-LD-h1i"/>
+                <constraint firstItem="fiF-jH-a0T" firstAttribute="centerX" secondItem="CUk-gQ-KP0" secondAttribute="centerX" id="ZBk-FF-idr"/>
+                <constraint firstItem="CUk-gQ-KP0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fLY-Dd-owA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="127" height="142"/>
+            <connections>
+                <outlet property="iconIV" destination="gNw-3i-wZB" id="QuP-Vp-A9N"/>
+                <outlet property="nameLbl" destination="fiF-jH-a0T" id="V9e-3J-OWz"/>
+            </connections>
+            <point key="canvasLocation" x="78.5" y="132"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cricleWhite" width="2139" height="2138"/>
+        <image name="settings" width="128" height="128"/>
+    </resources>
+</document>
