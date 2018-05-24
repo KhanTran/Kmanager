@@ -27,6 +27,10 @@
 		4F409F702031330F00E111B3 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F409F6F2031330F00E111B3 /* HomeViewController.m */; };
 		4F409F742031338400E111B3 /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F409F722031338400E111B3 /* HomeCollectionViewCell.m */; };
 		4F409F752031338400E111B3 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F409F732031338400E111B3 /* HomeCollectionViewCell.xib */; };
+		4F49CCEE20B5C1A5003CB574 /* ThemNhanVienViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCED20B5C1A5003CB574 /* ThemNhanVienViewController.m */; };
+		4F49CCF420B5C347003CB574 /* ThemSanPhamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */; };
+		4F49CCF720B5C3DE003CB574 /* AdminSanPhamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */; };
+		4F49CCFA20B5C806003CB574 /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCF920B5C806003CB574 /* AddLocationViewController.m */; };
 		4F625DCB2050D948008F59BC /* QRScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F625DC92050D948008F59BC /* QRScanViewController.xib */; };
 		4F625DCC2050D948008F59BC /* QRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F625DCA2050D948008F59BC /* QRScanViewController.m */; };
 		4F625DCF2050E139008F59BC /* ChiTietSanPhamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F625DCE2050E139008F59BC /* ChiTietSanPhamViewController.m */; };
@@ -65,6 +69,7 @@
 		4FE2D05A2091BE520054063D /* DanhSachSanPhamDaGanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2D0592091BE520054063D /* DanhSachSanPhamDaGanViewController.m */; };
 		4FE2D05D2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2D05C2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m */; };
 		4FE3D4722099519D00642A97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3D4712099519C00642A97 /* MapKit.framework */; };
+		4FF2396920B65344009923A7 /* AdminSanPhamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,14 @@
 		4F409F712031338400E111B3 /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
 		4F409F722031338400E111B3 /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
 		4F409F732031338400E111B3 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F49CCEC20B5C1A5003CB574 /* ThemNhanVienViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemNhanVienViewController.h; sourceTree = "<group>"; };
+		4F49CCED20B5C1A5003CB574 /* ThemNhanVienViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemNhanVienViewController.m; sourceTree = "<group>"; };
+		4F49CCF220B5C347003CB574 /* ThemSanPhamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemSanPhamViewController.h; sourceTree = "<group>"; };
+		4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemSanPhamViewController.m; sourceTree = "<group>"; };
+		4F49CCF520B5C3DE003CB574 /* AdminSanPhamTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminSanPhamTableViewController.h; sourceTree = "<group>"; };
+		4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminSanPhamTableViewController.m; sourceTree = "<group>"; };
+		4F49CCF820B5C806003CB574 /* AddLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
+		4F49CCF920B5C806003CB574 /* AddLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
 		4F625DC82050D948008F59BC /* QRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScanViewController.h; sourceTree = "<group>"; };
 		4F625DC92050D948008F59BC /* QRScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanViewController.xib; sourceTree = "<group>"; };
 		4F625DCA2050D948008F59BC /* QRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScanViewController.m; sourceTree = "<group>"; };
@@ -192,6 +205,8 @@
 		4FE2D05B2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanhSachSanPhamDaGanTableViewCell.h; sourceTree = "<group>"; };
 		4FE2D05C2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanhSachSanPhamDaGanTableViewCell.m; sourceTree = "<group>"; };
 		4FE3D4712099519C00642A97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4FF2396720B65344009923A7 /* AdminSanPhamTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminSanPhamTableViewCell.h; sourceTree = "<group>"; };
+		4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminSanPhamTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +272,14 @@
 				4FA1F4092060ED1100F6F898 /* BoLocTableViewController.h */,
 				4FA1F40A2060ED1100F6F898 /* BoLocTableViewController.m */,
 				4F3057B4202E809900374E80 /* Main.storyboard */,
+				4FF2396720B65344009923A7 /* AdminSanPhamTableViewCell.h */,
+				4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */,
+				4F49CCF820B5C806003CB574 /* AddLocationViewController.h */,
+				4F49CCF920B5C806003CB574 /* AddLocationViewController.m */,
+				4F49CCF520B5C3DE003CB574 /* AdminSanPhamTableViewController.h */,
+				4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */,
+				4F49CCF220B5C347003CB574 /* ThemSanPhamViewController.h */,
+				4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */,
 				4FC8D0FB20B456A800BA0203 /* AdminPlanTableViewCell.h */,
 				4FC8D0FC20B456A800BA0203 /* AdminPlanTableViewCell.m */,
 				4FC61CC3209BFC8800BBC1CE /* AminPlanViewController.h */,
@@ -265,6 +288,8 @@
 				4FC61CBB209B6D7400BBC1CE /* NhanVienViewController.m */,
 				4FC61CBD209B6D9400BBC1CE /* NhanVienTableViewCell.h */,
 				4FC61CBE209B6D9400BBC1CE /* NhanVienTableViewCell.m */,
+				4F49CCEC20B5C1A5003CB574 /* ThemNhanVienViewController.h */,
+				4F49CCED20B5C1A5003CB574 /* ThemNhanVienViewController.m */,
 				4FC61CC0209B712F00BBC1CE /* AdminCustomerTableViewCell.h */,
 				4FC61CC1209B712F00BBC1CE /* AdminCustomerTableViewCell.m */,
 				4FC8D0FE20B463E100BA0203 /* Thua */,
@@ -649,6 +674,7 @@
 				4F747F2D2090834600F2BF6F /* ChangePasswordViewController.m in Sources */,
 				4FC61C9E209A9EFE00BBC1CE /* AdminHomeViewController.m in Sources */,
 				4F896ABA208D69EE00947D09 /* CustomerTableViewController.m in Sources */,
+				4F49CCFA20B5C806003CB574 /* AddLocationViewController.m in Sources */,
 				4FE2D05A2091BE520054063D /* DanhSachSanPhamDaGanViewController.m in Sources */,
 				4F3057B9202E809A00374E80 /* Kmanager.xcdatamodeld in Sources */,
 				4FC61CBF209B6D9400BBC1CE /* NhanVienTableViewCell.m in Sources */,
@@ -660,6 +686,7 @@
 				4F2AF1562047EBC800B74CDE /* TableViewCell.m in Sources */,
 				4F625DCF2050E139008F59BC /* ChiTietSanPhamViewController.m in Sources */,
 				4F0AAB452092293300397ACC /* DanhSachLoaiSPViewController.m in Sources */,
+				4F49CCEE20B5C1A5003CB574 /* ThemNhanVienViewController.m in Sources */,
 				4FE2D05720917D630054063D /* AddCustomerViewController.m in Sources */,
 				4FC61CAD209AC2B400BBC1CE /* SanPhamObj.m in Sources */,
 				4FE2D05D2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m in Sources */,
@@ -668,8 +695,10 @@
 				4F747F292090806500F2BF6F /* DetailCustomer2TableViewCell.m in Sources */,
 				4F409F742031338400E111B3 /* HomeCollectionViewCell.m in Sources */,
 				4F896AD5208DC08E00947D09 /* PlanCustomAnnotationView.m in Sources */,
+				4F49CCF720B5C3DE003CB574 /* AdminSanPhamTableViewController.m in Sources */,
 				4F3057B0202E809900374E80 /* AppDelegate.m in Sources */,
 				4FB97591204A30F200D1ECD0 /* PlanViewController.m in Sources */,
+				4FF2396920B65344009923A7 /* AdminSanPhamTableViewCell.m in Sources */,
 				4FC61CB9209B6CAB00BBC1CE /* AdminCustomerTableViewController.m in Sources */,
 				4F3057EB202EA09A00374E80 /* IndiViewController.m in Sources */,
 				4FC61CBC209B6D7400BBC1CE /* NhanVienViewController.m in Sources */,
@@ -682,6 +711,7 @@
 				4F3057E8202E828300374E80 /* Server.m in Sources */,
 				4F896ACF208DB67600947D09 /* LocationCustomerViewController.m in Sources */,
 				4F896AD4208DC08E00947D09 /* PlanCustomAnnotation.m in Sources */,
+				4F49CCF420B5C347003CB574 /* ThemSanPhamViewController.m in Sources */,
 				4FC61CA1209AA07600BBC1CE /* AdminHomeCollectionViewCell.m in Sources */,
 				4F2AF1522047E92900B74CDE /* StaffInformationViewController.m in Sources */,
 				4FC8D0FD20B456A800BA0203 /* AdminPlanTableViewCell.m in Sources */,

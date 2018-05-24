@@ -9,6 +9,7 @@
 #import "NhanVienViewController.h"
 #import "NhanVienTableViewCell.h"
 #import "Server.h"
+#import "ThemNhanVienViewController.h"
 @interface NhanVienViewController ()<UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray *arrNhanVien;
@@ -25,13 +26,19 @@
     _tableviewNhanVien.dataSource = self;
     arrNhanVien = [[NSMutableArray alloc] init];
     arrNhanVienSearch = [[NSMutableArray alloc] init];
-    if (_arrayStaff.count > 0) {
-        _btnAdd.title = @"Xong";
-    }
+//    if (_arrayStaff.count > 0) {
+//        _btnAdd.title = @"Xong";
+//    }
     [self requestNhanVien];
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:true];
+    if (_viewMode == 2) {
+        _btnAdd.title = @"Xong";
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -137,7 +144,7 @@
 
         
     }
-    else
+    else if (_viewMode == 2)
     {
         
         if (cell.accessoryType == UITableViewCellAccessoryNone) {
@@ -157,6 +164,11 @@
             }
             cell.accessoryType = UITableViewCellAccessoryNone;
         }
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"AddStaffIdentifier" sender:nil];
+
     }
     
 }
@@ -196,56 +208,67 @@
     
 }
 - (IBAction)btnAddPressed:(id)sender {
-    [_dicStaff removeObjectForKey:@"users"];
-    NSMutableArray *arrIdStaff = [[NSMutableArray alloc] init];
-
-    for (int i=0; i<_arrayStaff.count; i++) {
-        NSDictionary *dic = [_arrayStaff objectAtIndex:i];
-        NSString *strID = [dic objectForKey:@"_id"];
-        [arrIdStaff addObject:strID];
-    }
-    [_dicStaff setValue:arrIdStaff forKey:@"users"];
-
-    [[Server sharedServer] putData:@"http://svkmanager.herokuapp.com/api/customer" param:_dicStaff completion:^(NSError *error, NSDictionary *data){
-        if (error == nil) {
-            NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
-            NSInteger status = [[data objectForKey:@"status"] integerValue];
-            
-            if (status == true) {
-                UIAlertController* c = [UIAlertController alertControllerWithTitle:@"" message:@"Sửa thông tin khách hàng thành công" preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                    [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadData" object:nil userInfo:nil];
-                    
-                    [self popoverPresentationController];
-                    
-                }];
-                [c addAction:okAct];
-                [self presentViewController:c animated:YES completion:nil];
-            }
-            else
-            {
-                UIAlertController* c = [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                    
-                    
-                }];
-                [c addAction:okAct];
-                [self presentViewController:c animated:YES completion:nil];
-            }
-            
+    if (_viewMode == 2) {
+        [_dicStaff removeObjectForKey:@"users"];
+        NSMutableArray *arrIdStaff = [[NSMutableArray alloc] init];
+        
+        for (int i=0; i<_arrayStaff.count; i++) {
+            NSDictionary *dic = [_arrayStaff objectAtIndex:i];
+            NSString *strID = [dic objectForKey:@"_id"];
+            [arrIdStaff addObject:strID];
         }
-        else {
-            if (error.code == 3840) {
-                NSLog(@"Username not exist.");
+        [_dicStaff setValue:arrIdStaff forKey:@"users"];
+        
+        [[Server sharedServer] putData:@"http://svkmanager.herokuapp.com/api/customer" param:_dicStaff completion:^(NSError *error, NSDictionary *data){
+            if (error == nil) {
+                NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
+                NSInteger status = [[data objectForKey:@"status"] integerValue];
+                
+                if (status == true) {
+                    UIAlertController* c = [UIAlertController alertControllerWithTitle:@"" message:@"Sửa thông tin khách hàng thành công" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadData" object:nil userInfo:nil];
+                        
+                        [self.navigationController popViewControllerAnimated:true];
+                        
+                    }];
+                    [c addAction:okAct];
+                    [self presentViewController:c animated:YES completion:nil];
+                }
+                else
+                {
+                    UIAlertController* c = [UIAlertController alertControllerWithTitle:@"" message:msg preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                        
+                        
+                    }];
+                    [c addAction:okAct];
+                    [self presentViewController:c animated:YES completion:nil];
+                }
+                
             }
             else {
-                UIAlertController* c = [UIAlertController alertControllerWithTitle:@"Lỗi chưa xác định!" message:@"Lỗi chưa xác định. Bạn có kiểm tra lại kết nối mạng và thử lại." preferredStyle:UIAlertControllerStyleAlert];
-                UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-                [c addAction:okAct];
-                [self presentViewController:c animated:YES completion:nil];
-                NSLog(@"Error: %@.", error);
+                if (error.code == 3840) {
+                    NSLog(@"Username not exist.");
+                }
+                else {
+                    UIAlertController* c = [UIAlertController alertControllerWithTitle:@"Lỗi chưa xác định!" message:@"Lỗi chưa xác định. Bạn có kiểm tra lại kết nối mạng và thử lại." preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                    [c addAction:okAct];
+                    [self presentViewController:c animated:YES completion:nil];
+                    NSLog(@"Error: %@.", error);
+                }
             }
-        }
-    }];
+        }];
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"AddStaffIdentifier" sender:nil];
+    }
+
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
 }
 @end

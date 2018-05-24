@@ -39,14 +39,14 @@
 }
 
 - (IBAction)huyBtnPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (IBAction)xacNhanBtnPressed:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(timePicker:didChooseTime:)])
     {
         [self.delegate timePicker:self didChooseTime:currentDate];
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:true completion:nil];
 
     }
 

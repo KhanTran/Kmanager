@@ -22,5 +22,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomBtnGui;
 @property (nonatomic) NSInteger isEdit;
 @property (strong,nonatomic) NSDictionary *dicCustomer;
+@property (strong, nonatomic) IBOutlet UIButton *btnMap;
+- (IBAction)btnMapPressed:(id)sender;
+@property (nonatomic) NSInteger viewMode;
 
 @end

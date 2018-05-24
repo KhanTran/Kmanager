@@ -123,9 +123,9 @@
         case 2:
             [self performSegueWithIdentifier:@"NhanVienIdentifier" sender:nil];
             break;
-//        case 4:
-//            [self scanQRCodeAction];
-//            break;
+        case 4:
+            [self performSegueWithIdentifier:@"ListProductIdentifier" sender:nil];
+            break;
         default:
 //            [self performSegueWithIdentifier:@"infoIdentifier" sender:nil];
             break;

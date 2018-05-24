@@ -8,12 +8,15 @@
 
 #import "AddCustomerViewController.h"
 #import "Server.h"
+#import "AddLocationViewController.h"
 @interface AddCustomerViewController ()<UITextFieldDelegate,UITextViewDelegate>
 {
     CLLocation * locationNew;
     UITextField *customTF;
     UITextView *customTV;
     BOOL isView;
+    double kinhdoC;
+    double vidoC;
 }
 @end
 
@@ -36,6 +39,7 @@
         _txtGhiChu.text = [NSString stringWithFormat:@"%@",[_dicCustomer objectForKey:@"note"]];
 
     }
+    else
     {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
@@ -72,24 +76,43 @@
 
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:true];
+    if (_viewMode == 3 || _viewMode == 4) {
+        [_btnMap setHidden:NO];
+    }
+    else
+    {
+        [_btnMap setHidden:YES];
+    }
+    if (_isEdit == 1)
+    {
+        kinhdoC = [[_dicCustomer objectForKey:@"latitude"] doubleValue];
+        vidoC = [[_dicCustomer objectForKey:@"latitude"] doubleValue];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"SelectLocationCustomerIdentifier"]) {
+        AddLocationViewController *vc = [segue destinationViewController];
+        vc.delegate = self;
+    }
 }
-*/
 #pragma mark - location delegate
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
     locationNew =[locations lastObject];
+    kinhdoC = locationNew.coordinate.longitude;
+    vidoC = locationNew.coordinate.latitude;
     if(locationNew.coordinate.latitude>1.0 && locationNew.coordinate.longitude >1.0)
     {
         [self.locationManager stopUpdatingLocation];
@@ -132,19 +155,23 @@
         return;
     }
     if (_isEdit == 1) {
-        double kinhdo = [[_dicCustomer objectForKey:@"latitude"] doubleValue];
-        double vido = [[_dicCustomer objectForKey:@"latitude"] doubleValue];
+
         NSDictionary * postDic = @{@"idlogin":[NSString stringWithFormat:@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"idnhanvien"]],
                                    @"_id":[NSString stringWithFormat:@"%@",[_dicCustomer objectForKey:@"_id"]],
                                    @"name": self.txtTenKhachHang.text,
                                    @"phoneNumber": self.txtSoDienThoai.text,
                                    @"address": self.txtDiaChi.text,
                                    @"note":self.txtGhiChu.text,
-                                   @"longitude":[NSString stringWithFormat:@"%f",kinhdo],
-                                   @"latitude":[NSString stringWithFormat:@"%f",vido],
+                                   @"longitude":[NSString stringWithFormat:@"%f",kinhdoC],
+                                   @"latitude":[NSString stringWithFormat:@"%f",vidoC],
                                    @"contact":self.txtNguoiLienHe.text,
                                    @"code":self.txtMaKhachHang.text
                                    };
+        NSMutableDictionary *dicStaff = [[NSMutableDictionary alloc] init];
+        dicStaff = [postDic mutableCopy];
+        NSArray *arrIdStaff = [_dicCustomer objectForKey:@"users"];
+        [dicStaff setValue:arrIdStaff forKey:@"users"];
+        postDic = dicStaff;
         [[Server sharedServer] putData:@"http://svkmanager.herokuapp.com/api/customer" param:postDic completion:^(NSError *error, NSDictionary *data){
             if (error == nil) {
                 NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
@@ -155,7 +182,7 @@
                     UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadData" object:nil userInfo:nil];
                         
-                        [self popoverPresentationController];
+                        [self.navigationController popViewControllerAnimated:true];
                         
                     }];
                     [c addAction:okAct];
@@ -189,18 +216,25 @@
     }
     else
     {
-        double kinhdo = locationNew.coordinate.longitude;
-        double vido = locationNew.coordinate.latitude;
+
+        
         NSDictionary * postDic = @{@"idlogin":[NSString stringWithFormat:@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"idnhanvien"]],
                                    @"name": self.txtTenKhachHang.text,
                                    @"phoneNumber": self.txtSoDienThoai.text,
                                    @"address": self.txtDiaChi.text,
                                    @"note":self.txtGhiChu.text,
-                                   @"longitude":[NSString stringWithFormat:@"%f",kinhdo],
-                                   @"latitude":[NSString stringWithFormat:@"%f",vido],
+                                   @"longitude":[NSString stringWithFormat:@"%f",kinhdoC],
+                                   @"latitude":[NSString stringWithFormat:@"%f",vidoC],
                                    @"contact":self.txtNguoiLienHe.text,
                                    @"code":self.txtMaKhachHang.text
                                    };
+        if (_viewMode == 2) {
+            NSMutableDictionary *dicStaff = [[NSMutableDictionary alloc] init];
+            dicStaff = [postDic mutableCopy];
+            NSArray *arrIdStaff = @[[[NSUserDefaults standardUserDefaults] objectForKey:@"idnhanvien"]];
+            [dicStaff setValue:arrIdStaff forKey:@"users"];
+            postDic = dicStaff;
+        }
         [[Server sharedServer] postData:@"http://svkmanager.herokuapp.com/api/customer" param:postDic completion:^(NSError *error, NSDictionary *data){
             if (error == nil) {
                 NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
@@ -211,8 +245,8 @@
                     UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadData" object:nil userInfo:nil];
                         
-                        [self popoverPresentationController];
-                        
+                        [self dismissViewControllerAnimated:true completion:nil];
+
                     }];
                     [c addAction:okAct];
                     [self presentViewController:c animated:YES completion:nil];
@@ -340,5 +374,13 @@
     [self.view layoutIfNeeded];
 
     
+}
+- (IBAction)btnMapPressed:(id)sender {
+}
+-(void)didSelectLocation :(AddLocationViewController*)homevc withAddress :(NSString*)address withLocation :(CLLocation*)locationSend
+{
+    _txtDiaChi.text= address;
+    kinhdoC = locationSend.coordinate.longitude;
+    vidoC = locationSend.coordinate.latitude;
 }
 @end

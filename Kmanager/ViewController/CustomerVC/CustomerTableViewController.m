@@ -44,7 +44,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(requestCustomer) name:@"ReloadData" object:nil];
     isEdit = 0;
 
-    [self requestCustomer];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -52,7 +51,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:true];
+    [self requestCustomer];
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -259,6 +263,7 @@
         AddCustomerViewController *vc = [segue destinationViewController];
         vc.dicCustomer = dicDetailCustomer;
         vc.isEdit = isEdit;
+        vc.viewMode = _viewMode;
     }
     else if ([[segue identifier] isEqualToString:@"planIdentifier"])
     {
@@ -272,6 +277,7 @@
         vc.arrayStaff = [arrayStaff mutableCopy];
         vc.dicStaff = [[NSMutableDictionary alloc] init];
         vc.dicStaff = [dicDetailCustomer mutableCopy];
+        vc.viewMode = 2;
 //        vc.strKhachHang = [NSString stringWithFormat:@"%@", [dicDetailCustomer objectForKey:@"_id"]];
     }
 }
