@@ -30,7 +30,7 @@
 
     lpgr.minimumPressDuration = 0.5;
     lpgr.delegate = self;
-    [self.customerMapView addGestureRecognizer:lpgr];
+//    [self.customerMapView addGestureRecognizer:lpgr];
     _btnLocation.layer.cornerRadius = 3;
     _btnLocation.layer.shadowColor = [UIColor blackColor].CGColor;
     _btnLocation.layer.shadowOpacity = 0.7;

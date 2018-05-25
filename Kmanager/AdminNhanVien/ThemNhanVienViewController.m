@@ -43,19 +43,20 @@
     
 }
 - (IBAction)btnLuuSuaPressed:(id)sender {
-    
+    [self sendData];
 }
 - (void)sendData
 {
     NSDictionary * postDic = @{@"username":self.taiKhoanTF.text,
                                @"password": self.matKhauTF.text,
-                               @"phoneNumber": self.sdtTF.text,
+                               @"phonenumber": self.sdtTF.text,
                                @"email": self.emailTF.text,
                                @"fullname":self.tenTF.text,
                                @"dateofbirth":self.ngaySinhTF.text,
                                @"avartar":@"",
                                @"tokenfirebase":@""
                                };
+
     [[Server sharedServer] postData:@"http://svkmanager.herokuapp.com/api/user" param:postDic completion:^(NSError *error, NSDictionary *data){
         if (error == nil) {
             NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
@@ -66,7 +67,7 @@
                 UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                     [[NSNotificationCenter defaultCenter] postNotificationName:@"ReloadData" object:nil userInfo:nil];
                     
-                    [self dismissViewControllerAnimated:true completion:nil];
+                    [self.navigationController popViewControllerAnimated:true];
                     
                 }];
                 [c addAction:okAct];

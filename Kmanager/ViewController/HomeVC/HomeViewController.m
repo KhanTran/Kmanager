@@ -148,6 +148,9 @@
         case 4:
             [self scanQRCodeAction];
             break;
+//        case 4:
+//            [self scanQRCodeAction];
+//            break;
         default:
             [self performSegueWithIdentifier:@"infoIdentifier" sender:nil];
             break;
@@ -231,8 +234,14 @@
 //            [arrMenuSetting addObject:postDic];
 //        }
         else    if ([strIdChucNang isEqualToString:@"APP05"]) {
-            postDic = @{@"TenChucNang":@"Liên hệ",
+            postDic = @{@"TenChucNang":@"Báo cáo",
                         @"STT":@6,
+                        @"TenIcon":@"pie-chart",
+                        @"isSetting":@false
+                        };
+            [arrMenuChucNang addObject:postDic];
+            postDic = @{@"TenChucNang":@"Liên hệ",
+                        @"STT":@7,
                         @"TenIcon":@"information.png",
                         @"isSetting":@false
                         };

@@ -22,13 +22,26 @@
     [super viewDidLoad];
     arrSanPham = [[NSMutableArray alloc] init];
     arrSanPhamSearch = [[NSMutableArray alloc] init];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    [self requestSanPham];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:true];
+    [self requestSanPham];
 
+    _arrayProduct = [[NSMutableArray alloc] init];
+    if (_viewMode == 1) {
+        [self.btnAdd setTitle:@"Xong"];
+    }
+    else
+    {
+        
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -58,7 +71,19 @@
     NSDictionary *dic = [arrSanPhamSearch objectAtIndex:indexPath.row];
     cell.lblTen.text = [NSString stringWithFormat:@"%@", [dic objectForKey:@"name"]];
     cell.lblModel.text = [NSString stringWithFormat:@"%@", [dic objectForKey:@"model"]];
-
+    if (_viewMode == 1) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        
+        for (int i = 0; i<_arrayProductID.count; i++) {
+            NSString *dicS = [_arrayProductID objectAtIndex:i];
+            if ([dicS isEqualToString:[NSString stringWithFormat:@"%@",[dic objectForKey:@"_id"]]] ) {
+                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+                
+            }
+            
+            
+        }
+    }
     // Configure the cell...
     
     return cell;
@@ -70,7 +95,33 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.tableView deselectRowAtIndexPath:indexPath animated:true];
-    [self performSegueWithIdentifier:@"AddProductIdentifier" sender:nil];
+    NSDictionary *dic = [arrSanPhamSearch objectAtIndex:indexPath.row];
+    UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    if (_viewMode == 1)
+    {
+        
+        if (cell.accessoryType == UITableViewCellAccessoryNone) {
+            //        NSString *idCuaHang = dicSP.idSanPham;
+            [_arrayProductID addObject:[NSString stringWithFormat:@"%@",[dic objectForKey:@"_id"]]];
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            
+        }
+        else
+        {
+            for (int i = 0; i< _arrayProductID.count; i++) {
+                NSString *dicS = [_arrayProductID objectAtIndex:i];
+                
+                if ([[NSString stringWithFormat:@"%@",dicS] isEqualToString:[NSString stringWithFormat:@"%@",[dic objectForKey:@"_id"]]] ) {
+                    [_arrayProductID removeObjectAtIndex:i];
+                }
+            }
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"AddProductIdentifier" sender:nil];
+    }
 }
 /*
 // Override to support conditional editing of the table view.
@@ -156,6 +207,24 @@
 }
 
 - (IBAction)btnAddPressed:(id)sender {
-    [self performSegueWithIdentifier:@"AddProductIdentifier" sender:nil];
+    if (_viewMode == 1) {
+        for (int i = 0; i<arrSanPhamSearch.count; i++) {
+            NSDictionary *dic = [arrSanPhamSearch objectAtIndex:i];
+            for (NSString *idSp in _arrayProductID) {
+                if ([[NSString stringWithFormat:@"%@",idSp] isEqualToString:[NSString stringWithFormat:@"%@",[dic objectForKey:@"_id"]]] ) {
+                    [_arrayProduct addObject:dic];
+                }
+            }
+        }
+        if (self.delegate && [self.delegate respondsToSelector:@selector(selectSanPham:didChooseSanPham:)])
+        {
+            [self.delegate selectSanPham:self didChooseSanPham:_arrayProduct];
+            [self dismissViewControllerAnimated:true completion:nil];
+        }
+    }
+    else
+    {
+        [self performSegueWithIdentifier:@"AddProductIdentifier" sender:nil];
+    }
 }
 @end

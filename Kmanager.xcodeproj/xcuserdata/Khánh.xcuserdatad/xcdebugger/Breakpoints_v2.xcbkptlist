@@ -296,7 +296,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kmanager/Support/Server.m"
-            timestampString = "548838319.438092"
+            timestampString = "548875450.147413"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "171"
@@ -359,7 +359,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kmanager/ViewController/CustomerVC/AddVC/AddCustomerViewController.m"
-            timestampString = "548850162.565478"
+            timestampString = "548876516.855086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "175"
@@ -477,69 +477,6 @@
             endingLineNumber = "199"
             landmarkName = "-requestPlan"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kmanager/AminPlanViewController.m"
-            timestampString = "548738466.493403"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "-requestKeHoach"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[AminPlanViewController requestKeHoach]"
-                  moduleName = "Kmanager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cryrose/Kmanager/Kmanager/AminPlanViewController.m"
-                  timestampString = "548692672.83626"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "74">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__40-[AminPlanViewController requestKeHoach]_block_invoke"
-                  moduleName = "Kmanager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cryrose/Kmanager/Kmanager/AminPlanViewController.m"
-                  timestampString = "548692672.839974"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "90">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "Kmanager"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cryrose/Kmanager/Kmanager/AminPlanViewController.m"
-                  timestampString = "548692672.843775"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

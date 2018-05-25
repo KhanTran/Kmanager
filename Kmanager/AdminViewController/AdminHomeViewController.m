@@ -9,6 +9,7 @@
 #import "AdminHomeViewController.h"
 #import "AdminHomeCollectionViewCell.h"
 #import "CustomerTableViewController.h"
+#import "Server.h"
 @interface AdminHomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     NSInteger viewMode;
@@ -37,7 +38,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 9;
+    return 7;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -112,10 +113,9 @@
         case 0:
             [self performSegueWithIdentifier:@"adminPlanIdentifier" sender:nil];
             break;
-//        case 3:
-//            viewMode = 1;
-//            [self performSegueWithIdentifier:@"customerIdentifier" sender:nil];
-//            break;
+        case 3:
+            [self performSegueWithIdentifier:@"ListQRCodeIdentifier" sender:nil];
+            break;
         case 1:
             viewMode = 4;
             [self performSegueWithIdentifier:@"adminCustomerIdentifier" sender:nil];
@@ -155,6 +155,42 @@
 //    }
     
 }
-
+- (IBAction)logoutAction:(id)sender {
+    [[Server sharedServer] logoutWithUsername:[[NSUserDefaults standardUserDefaults] objectForKey:@"idnhanvien"] token:[[NSUserDefaults standardUserDefaults] objectForKey:@"token"] completion:^(NSError *error, NSDictionary *data) {
+        if (error == nil) {
+            NSLog(@"Login success! \n ----------------------------------\n %@", data);
+            NSInteger status = [[data objectForKey:@"status"] integerValue];
+            if (status != 0) {
+                NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
+                [self dismissViewControllerAnimated:true completion:nil];
+            }
+            else
+            {
+                NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
+                UIAlertController* c = [UIAlertController alertControllerWithTitle:@"Lỗi!" message:msg preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                [c addAction:okAct];
+                [self presentViewController:c animated:YES completion:nil];
+            }
+            
+        }
+        else {
+            if (error.code == 3840) {
+                NSLog(@"Username not exist.");
+            }
+            else {
+                UIAlertController* c = [UIAlertController alertControllerWithTitle:@"Lỗi chưa xác định!" message:@"Lỗi chưa xác định. Bạn có kiểm tra lại kết nối mạng và thử lại." preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction* okAct = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+                [c addAction:okAct];
+                [self presentViewController:c animated:YES completion:nil];
+                NSLog(@"Error: %@.", error);
+            }
+        }
+    }];
+}
+-(void)logoutApp
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
 @end

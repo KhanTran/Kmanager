@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F0A93EA20B735F500324F59 /* ListQRTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A93E920B735F500324F59 /* ListQRTableViewController.m */; };
 		4F0AAB452092293300397ACC /* DanhSachLoaiSPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AAB442092293300397ACC /* DanhSachLoaiSPViewController.m */; };
 		4F0AAB482092353600397ACC /* DanhSachLoaiSPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AAB472092353600397ACC /* DanhSachLoaiSPTableViewCell.m */; };
 		4F0AAB4B2092447200397ACC /* DetailProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0AAB4A2092447200397ACC /* DetailProductTableViewCell.m */; };
@@ -90,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F0A93E820B735F500324F59 /* ListQRTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListQRTableViewController.h; sourceTree = "<group>"; };
+		4F0A93E920B735F500324F59 /* ListQRTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListQRTableViewController.m; sourceTree = "<group>"; };
 		4F0AAB432092293300397ACC /* DanhSachLoaiSPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanhSachLoaiSPViewController.h; sourceTree = "<group>"; };
 		4F0AAB442092293300397ACC /* DanhSachLoaiSPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanhSachLoaiSPViewController.m; sourceTree = "<group>"; };
 		4F0AAB462092353600397ACC /* DanhSachLoaiSPTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanhSachLoaiSPTableViewCell.h; sourceTree = "<group>"; };
@@ -239,6 +242,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F0A93E320B7339100324F59 /* AdminPlan */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8D0FB20B456A800BA0203 /* AdminPlanTableViewCell.h */,
+				4FC8D0FC20B456A800BA0203 /* AdminPlanTableViewCell.m */,
+				4FC61CC3209BFC8800BBC1CE /* AminPlanViewController.h */,
+				4FC61CC4209BFC8800BBC1CE /* AminPlanViewController.m */,
+				4FC61CA5209AB6A200BBC1CE /* ChonSanPhamTableViewCell.h */,
+				4FC61CA6209AB6A200BBC1CE /* ChonSanPhamTableViewCell.m */,
+				4FC61CA8209ABDD800BBC1CE /* ThemKeHoachViewController.h */,
+				4FC61CA9209ABDD800BBC1CE /* ThemKeHoachViewController.m */,
+				4FC61CAB209AC2B400BBC1CE /* SanPhamObj.h */,
+				4FC61CAC209AC2B400BBC1CE /* SanPhamObj.m */,
+			);
+			path = AdminPlan;
+			sourceTree = "<group>";
+		};
+		4F0A93E420B7340600324F59 /* AdminNhanVien */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61CBA209B6D7400BBC1CE /* NhanVienViewController.h */,
+				4FC61CBB209B6D7400BBC1CE /* NhanVienViewController.m */,
+				4FC61CBD209B6D9400BBC1CE /* NhanVienTableViewCell.h */,
+				4FC61CBE209B6D9400BBC1CE /* NhanVienTableViewCell.m */,
+				4F49CCEC20B5C1A5003CB574 /* ThemNhanVienViewController.h */,
+				4F49CCED20B5C1A5003CB574 /* ThemNhanVienViewController.m */,
+			);
+			path = AdminNhanVien;
+			sourceTree = "<group>";
+		};
 		4F3057A2202E809900374E80 = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +298,7 @@
 			children = (
 				4F3057AE202E809900374E80 /* AppDelegate.h */,
 				4F3057AF202E809900374E80 /* AppDelegate.m */,
+				4F896AC4208D7E9200947D09 /* CustomerVC */,
 				4FB9758B204A308900D1ECD0 /* ViewController */,
 				4FC61C9B209A9ED200BBC1CE /* AdminViewController */,
 				4F625DCD2050E139008F59BC /* ChiTietSanPhamViewController.h */,
@@ -272,35 +306,21 @@
 				4FA1F4092060ED1100F6F898 /* BoLocTableViewController.h */,
 				4FA1F40A2060ED1100F6F898 /* BoLocTableViewController.m */,
 				4F3057B4202E809900374E80 /* Main.storyboard */,
+				4F0A93E820B735F500324F59 /* ListQRTableViewController.h */,
+				4F0A93E920B735F500324F59 /* ListQRTableViewController.m */,
 				4FF2396720B65344009923A7 /* AdminSanPhamTableViewCell.h */,
 				4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */,
-				4F49CCF820B5C806003CB574 /* AddLocationViewController.h */,
-				4F49CCF920B5C806003CB574 /* AddLocationViewController.m */,
 				4F49CCF520B5C3DE003CB574 /* AdminSanPhamTableViewController.h */,
 				4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */,
 				4F49CCF220B5C347003CB574 /* ThemSanPhamViewController.h */,
 				4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */,
-				4FC8D0FB20B456A800BA0203 /* AdminPlanTableViewCell.h */,
-				4FC8D0FC20B456A800BA0203 /* AdminPlanTableViewCell.m */,
-				4FC61CC3209BFC8800BBC1CE /* AminPlanViewController.h */,
-				4FC61CC4209BFC8800BBC1CE /* AminPlanViewController.m */,
-				4FC61CBA209B6D7400BBC1CE /* NhanVienViewController.h */,
-				4FC61CBB209B6D7400BBC1CE /* NhanVienViewController.m */,
-				4FC61CBD209B6D9400BBC1CE /* NhanVienTableViewCell.h */,
-				4FC61CBE209B6D9400BBC1CE /* NhanVienTableViewCell.m */,
-				4F49CCEC20B5C1A5003CB574 /* ThemNhanVienViewController.h */,
-				4F49CCED20B5C1A5003CB574 /* ThemNhanVienViewController.m */,
+				4F0A93E320B7339100324F59 /* AdminPlan */,
+				4F0A93E420B7340600324F59 /* AdminNhanVien */,
 				4FC61CC0209B712F00BBC1CE /* AdminCustomerTableViewCell.h */,
 				4FC61CC1209B712F00BBC1CE /* AdminCustomerTableViewCell.m */,
 				4FC8D0FE20B463E100BA0203 /* Thua */,
 				4FC61CAE209B011E00BBC1CE /* TimePickerViewController.h */,
 				4FC61CAF209B011E00BBC1CE /* TimePickerViewController.m */,
-				4FC61CA5209AB6A200BBC1CE /* ChonSanPhamTableViewCell.h */,
-				4FC61CA6209AB6A200BBC1CE /* ChonSanPhamTableViewCell.m */,
-				4FC61CA8209ABDD800BBC1CE /* ThemKeHoachViewController.h */,
-				4FC61CA9209ABDD800BBC1CE /* ThemKeHoachViewController.m */,
-				4FC61CAB209AC2B400BBC1CE /* SanPhamObj.h */,
-				4FC61CAC209AC2B400BBC1CE /* SanPhamObj.m */,
 				4F2AF1552047EBC800B74CDE /* TableViewCell.xib */,
 				4FB9758A204A306E00D1ECD0 /* Support */,
 				4F3057BA202E809A00374E80 /* Assets.xcassets */,
@@ -376,6 +396,8 @@
 				4F896AD1208DC08D00947D09 /* PlanCustomAnnotation.m */,
 				4F896AD2208DC08E00947D09 /* PlanCustomAnnotationView.h */,
 				4F896AD3208DC08E00947D09 /* PlanCustomAnnotationView.m */,
+				4F49CCF820B5C806003CB574 /* AddLocationViewController.h */,
+				4F49CCF920B5C806003CB574 /* AddLocationViewController.m */,
 			);
 			path = MapVC;
 			sourceTree = "<group>";
@@ -411,7 +433,6 @@
 				4FB9758E204A30B900D1ECD0 /* LoginVC */,
 				4FB9758C204A309E00D1ECD0 /* HomeVC */,
 				4FB9758D204A30AF00D1ECD0 /* StaffVC */,
-				4F896AC4208D7E9200947D09 /* CustomerVC */,
 				4F896AC5208D7FC300947D09 /* QRScanVC */,
 			);
 			path = ViewController;
@@ -694,6 +715,7 @@
 				4FC61CB6209B692200BBC1CE /* DanhSachKhachHangAllViewController.m in Sources */,
 				4F747F292090806500F2BF6F /* DetailCustomer2TableViewCell.m in Sources */,
 				4F409F742031338400E111B3 /* HomeCollectionViewCell.m in Sources */,
+				4F0A93EA20B735F500324F59 /* ListQRTableViewController.m in Sources */,
 				4F896AD5208DC08E00947D09 /* PlanCustomAnnotationView.m in Sources */,
 				4F49CCF720B5C3DE003CB574 /* AdminSanPhamTableViewController.m in Sources */,
 				4F3057B0202E809900374E80 /* AppDelegate.m in Sources */,

@@ -103,7 +103,9 @@
                         
                         [setDicP setValue:[dicScheme objectForKey:@"_id"] forKey:@"idscheme"];
                         [setDicP setValue:[NSString stringWithFormat:@"%@/%@", [dicScheme objectForKey:@"quantityDeployed"],[dicScheme objectForKey:@"quantityDeploy"]] forKey:@"tiendo"];
+                        [setDicP setValue:[NSString stringWithFormat:@"%@",[dicScheme objectForKey:@"quantityDeploy"]] forKey:@"soluongproduct"];
                         NSDictionary *dicProduct = [dicScheme objectForKey:@"product"];
+                        [setDicP setValue:[dicProduct objectForKey:@"_id"] forKey:@"idproduct"];
                         [setDicP setValue:[dicProduct objectForKey:@"name"] forKey:@"nameproduct"];
                         [setDicP setValue:[dicProduct objectForKey:@"model"] forKey:@"modelproduct"];
                         [arrProduct addObject:setDicP];

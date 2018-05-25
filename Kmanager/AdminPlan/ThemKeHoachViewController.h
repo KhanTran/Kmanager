@@ -32,6 +32,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *iconNhanVien;
 @property (strong, nonatomic) IBOutlet UIImageView *iconBatDau;
 @property (strong, nonatomic) IBOutlet UIImageView *iconKetThuc;
+@property (strong, nonatomic) IBOutlet UIButton *btnAddSp;
+- (IBAction)btnAddProductPressed:(id)sender;
 
 
 @end
