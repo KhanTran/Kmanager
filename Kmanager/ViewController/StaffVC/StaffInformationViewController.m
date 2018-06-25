@@ -62,7 +62,7 @@
                 cell.textLabel.text = [NSString stringWithFormat:@"Họ và tên: %@", [dic objectForKey:@"fullname"]];
                 break;
             case 1:
-                cell.textLabel.text = [NSString stringWithFormat:@"Số điện thoại: %@", [dic objectForKey:@"sdt"]];
+                cell.textLabel.text = [NSString stringWithFormat:@"Số điện thoại: %@", [dic objectForKey:@"phonenumber"]];
                 //            cell.backgroundColor =[UIColor colorWithRed:0.84 green:0.89 blue:0.90 alpha:1.0];
                 break;
             case 2:

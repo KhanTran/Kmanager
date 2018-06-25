@@ -8,6 +8,7 @@
 
 #import "ChangePasswordViewController.h"
 #import "Server.h"
+#import "Define.h"
 @interface ChangePasswordViewController ()
 
 @end
@@ -70,7 +71,11 @@
                                @"password": self.passwordOldTF.text,
                                @"newpassword": self.passwordRenewTF.text,
                                };
-    [[Server sharedServer] postData:@"http://svkmanager.herokuapp.com/api/user/changepassword" param:postDic completion:^(NSError *error, NSDictionary *data){
+    [[Server sharedServer] showAnimation:self.view];
+
+    [[Server sharedServer] postData:[NSString stringWithFormat:@"%@user/changepassword", ServerApi] param:postDic completion:^(NSError *error, NSDictionary *data){
+        [[Server sharedServer] hideAnimation:self.view];
+
         if (error == nil) {
             NSString *msg = [NSString stringWithFormat:@"%@", [data objectForKey:@"msg"]];
             UIAlertController* c = [UIAlertController alertControllerWithTitle:@"" message:@"Đổi mật khẩu thành công" preferredStyle:UIAlertControllerStyleAlert];

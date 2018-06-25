@@ -32,9 +32,13 @@
 		4F49CCF420B5C347003CB574 /* ThemSanPhamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */; };
 		4F49CCF720B5C3DE003CB574 /* AdminSanPhamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */; };
 		4F49CCFA20B5C806003CB574 /* AddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F49CCF920B5C806003CB574 /* AddLocationViewController.m */; };
+		4F4A0BFD20C925E400CBE684 /* BaoCaoKhachHangViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4A0BFC20C925E400CBE684 /* BaoCaoKhachHangViewController.m */; };
+		4F4A0C0020C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4A0BFF20C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.m */; };
 		4F625DCB2050D948008F59BC /* QRScanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F625DC92050D948008F59BC /* QRScanViewController.xib */; };
 		4F625DCC2050D948008F59BC /* QRScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F625DCA2050D948008F59BC /* QRScanViewController.m */; };
 		4F625DCF2050E139008F59BC /* ChiTietSanPhamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F625DCE2050E139008F59BC /* ChiTietSanPhamViewController.m */; };
+		4F645F0F20C0666900356363 /* BaoCaoKeHoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F645F0E20C0666900356363 /* BaoCaoKeHoachViewController.m */; };
+		4F645F1220C06F8000356363 /* DanhSachBaoCaoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F645F1120C06F8000356363 /* DanhSachBaoCaoTableViewController.m */; };
 		4F747F26209074F800F2BF6F /* DetaiCustomer2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F747F25209074F800F2BF6F /* DetaiCustomer2ViewController.m */; };
 		4F747F292090806500F2BF6F /* DetailCustomer2TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F747F282090806500F2BF6F /* DetailCustomer2TableViewCell.m */; };
 		4F747F2D2090834600F2BF6F /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F747F2C2090834600F2BF6F /* ChangePasswordViewController.m */; };
@@ -50,6 +54,8 @@
 		4FA1F406205FA84900F6F898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA1F405205FA84900F6F898 /* Foundation.framework */; };
 		4FA1F408205FA85800F6F898 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA1F407205FA85800F6F898 /* UIKit.framework */; };
 		4FA1F40B2060ED1100F6F898 /* BoLocTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1F40A2060ED1100F6F898 /* BoLocTableViewController.m */; };
+		4FA3C0BC20BAF2F800EB2654 /* ListQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3C0BB20BAF2F800EB2654 /* ListQRViewController.m */; };
+		4FAD126C20CEC56000EE7DC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAD126A20CEC56000EE7DC4 /* MBProgressHUD.m */; };
 		4FB97591204A30F200D1ECD0 /* PlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB97590204A30F200D1ECD0 /* PlanViewController.m */; };
 		4FB97596204A383D00D1ECD0 /* PlanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB97594204A383D00D1ECD0 /* PlanTableViewCell.m */; };
 		4FC61C9E209A9EFE00BBC1CE /* AdminHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC61C9D209A9EFE00BBC1CE /* AdminHomeViewController.m */; };
@@ -71,6 +77,8 @@
 		4FE2D05D2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE2D05C2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m */; };
 		4FE3D4722099519D00642A97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3D4712099519C00642A97 /* MapKit.framework */; };
 		4FF2396920B65344009923A7 /* AdminSanPhamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */; };
+		4FF5977E20D264340042183B /* DanhSachKeHoachBaoCaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5977D20D264340042183B /* DanhSachKeHoachBaoCaoViewController.m */; };
+		4FF5978120D275FC0042183B /* XemChiTietKeHoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5978020D275FC0042183B /* XemChiTietKeHoachViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,11 +146,19 @@
 		4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminSanPhamTableViewController.m; sourceTree = "<group>"; };
 		4F49CCF820B5C806003CB574 /* AddLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddLocationViewController.h; sourceTree = "<group>"; };
 		4F49CCF920B5C806003CB574 /* AddLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddLocationViewController.m; sourceTree = "<group>"; };
+		4F4A0BFB20C925E400CBE684 /* BaoCaoKhachHangViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaoCaoKhachHangViewController.h; sourceTree = "<group>"; };
+		4F4A0BFC20C925E400CBE684 /* BaoCaoKhachHangViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaoCaoKhachHangViewController.m; sourceTree = "<group>"; };
+		4F4A0BFE20C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaoCaoKhachHangSanPhamTableViewCell.h; sourceTree = "<group>"; };
+		4F4A0BFF20C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaoCaoKhachHangSanPhamTableViewCell.m; sourceTree = "<group>"; };
 		4F625DC82050D948008F59BC /* QRScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRScanViewController.h; sourceTree = "<group>"; };
 		4F625DC92050D948008F59BC /* QRScanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanViewController.xib; sourceTree = "<group>"; };
 		4F625DCA2050D948008F59BC /* QRScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRScanViewController.m; sourceTree = "<group>"; };
 		4F625DCD2050E139008F59BC /* ChiTietSanPhamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChiTietSanPhamViewController.h; sourceTree = "<group>"; };
 		4F625DCE2050E139008F59BC /* ChiTietSanPhamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChiTietSanPhamViewController.m; sourceTree = "<group>"; };
+		4F645F0D20C0666900356363 /* BaoCaoKeHoachViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaoCaoKeHoachViewController.h; sourceTree = "<group>"; };
+		4F645F0E20C0666900356363 /* BaoCaoKeHoachViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaoCaoKeHoachViewController.m; sourceTree = "<group>"; };
+		4F645F1020C06F8000356363 /* DanhSachBaoCaoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanhSachBaoCaoTableViewController.h; sourceTree = "<group>"; };
+		4F645F1120C06F8000356363 /* DanhSachBaoCaoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanhSachBaoCaoTableViewController.m; sourceTree = "<group>"; };
 		4F747F24209074F800F2BF6F /* DetaiCustomer2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetaiCustomer2ViewController.h; sourceTree = "<group>"; };
 		4F747F25209074F800F2BF6F /* DetaiCustomer2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetaiCustomer2ViewController.m; sourceTree = "<group>"; };
 		4F747F272090806500F2BF6F /* DetailCustomer2TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCustomer2TableViewCell.h; sourceTree = "<group>"; };
@@ -169,6 +185,10 @@
 		4FA1F407205FA85800F6F898 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4FA1F4092060ED1100F6F898 /* BoLocTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BoLocTableViewController.h; sourceTree = "<group>"; };
 		4FA1F40A2060ED1100F6F898 /* BoLocTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoLocTableViewController.m; sourceTree = "<group>"; };
+		4FA3C0BA20BAF2F800EB2654 /* ListQRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListQRViewController.h; sourceTree = "<group>"; };
+		4FA3C0BB20BAF2F800EB2654 /* ListQRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListQRViewController.m; sourceTree = "<group>"; };
+		4FAD126A20CEC56000EE7DC4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		4FAD126B20CEC56000EE7DC4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		4FB9758F204A30F200D1ECD0 /* PlanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanViewController.h; sourceTree = "<group>"; };
 		4FB97590204A30F200D1ECD0 /* PlanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanViewController.m; sourceTree = "<group>"; };
 		4FB97593204A383D00D1ECD0 /* PlanTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanTableViewCell.h; sourceTree = "<group>"; };
@@ -210,6 +230,11 @@
 		4FE3D4712099519C00642A97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4FF2396720B65344009923A7 /* AdminSanPhamTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdminSanPhamTableViewCell.h; sourceTree = "<group>"; };
 		4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdminSanPhamTableViewCell.m; sourceTree = "<group>"; };
+		4FF5977B20D24A130042183B /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
+		4FF5977C20D264340042183B /* DanhSachKeHoachBaoCaoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DanhSachKeHoachBaoCaoViewController.h; sourceTree = "<group>"; };
+		4FF5977D20D264340042183B /* DanhSachKeHoachBaoCaoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DanhSachKeHoachBaoCaoViewController.m; sourceTree = "<group>"; };
+		4FF5977F20D275FC0042183B /* XemChiTietKeHoachViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XemChiTietKeHoachViewController.h; sourceTree = "<group>"; };
+		4FF5978020D275FC0042183B /* XemChiTietKeHoachViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XemChiTietKeHoachViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,34 +267,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F0A93E320B7339100324F59 /* AdminPlan */ = {
+		4F0A93E320B7339100324F59 /* AdminPlanVC */ = {
 			isa = PBXGroup;
 			children = (
-				4FC8D0FB20B456A800BA0203 /* AdminPlanTableViewCell.h */,
-				4FC8D0FC20B456A800BA0203 /* AdminPlanTableViewCell.m */,
 				4FC61CC3209BFC8800BBC1CE /* AminPlanViewController.h */,
 				4FC61CC4209BFC8800BBC1CE /* AminPlanViewController.m */,
-				4FC61CA5209AB6A200BBC1CE /* ChonSanPhamTableViewCell.h */,
-				4FC61CA6209AB6A200BBC1CE /* ChonSanPhamTableViewCell.m */,
 				4FC61CA8209ABDD800BBC1CE /* ThemKeHoachViewController.h */,
 				4FC61CA9209ABDD800BBC1CE /* ThemKeHoachViewController.m */,
 				4FC61CAB209AC2B400BBC1CE /* SanPhamObj.h */,
 				4FC61CAC209AC2B400BBC1CE /* SanPhamObj.m */,
 			);
-			path = AdminPlan;
+			path = AdminPlanVC;
 			sourceTree = "<group>";
 		};
-		4F0A93E420B7340600324F59 /* AdminNhanVien */ = {
+		4F0A93E420B7340600324F59 /* AdminNhanVienVC */ = {
 			isa = PBXGroup;
 			children = (
 				4FC61CBA209B6D7400BBC1CE /* NhanVienViewController.h */,
 				4FC61CBB209B6D7400BBC1CE /* NhanVienViewController.m */,
-				4FC61CBD209B6D9400BBC1CE /* NhanVienTableViewCell.h */,
-				4FC61CBE209B6D9400BBC1CE /* NhanVienTableViewCell.m */,
 				4F49CCEC20B5C1A5003CB574 /* ThemNhanVienViewController.h */,
 				4F49CCED20B5C1A5003CB574 /* ThemNhanVienViewController.m */,
 			);
-			path = AdminNhanVien;
+			path = AdminNhanVienVC;
 			sourceTree = "<group>";
 		};
 		4F3057A2202E809900374E80 = {
@@ -280,6 +299,7 @@
 				4F3057D4202E809A00374E80 /* KmanagerUITests */,
 				4F3057AC202E809900374E80 /* Products */,
 				4FA1F402205FA83F00F6F898 /* Frameworks */,
+				4FC8D0FE20B463E100BA0203 /* Err */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,32 +316,9 @@
 		4F3057AD202E809900374E80 /* Kmanager */ = {
 			isa = PBXGroup;
 			children = (
-				4F3057AE202E809900374E80 /* AppDelegate.h */,
-				4F3057AF202E809900374E80 /* AppDelegate.m */,
-				4F896AC4208D7E9200947D09 /* CustomerVC */,
 				4FB9758B204A308900D1ECD0 /* ViewController */,
-				4FC61C9B209A9ED200BBC1CE /* AdminViewController */,
-				4F625DCD2050E139008F59BC /* ChiTietSanPhamViewController.h */,
-				4F625DCE2050E139008F59BC /* ChiTietSanPhamViewController.m */,
-				4FA1F4092060ED1100F6F898 /* BoLocTableViewController.h */,
-				4FA1F40A2060ED1100F6F898 /* BoLocTableViewController.m */,
-				4F3057B4202E809900374E80 /* Main.storyboard */,
-				4F0A93E820B735F500324F59 /* ListQRTableViewController.h */,
-				4F0A93E920B735F500324F59 /* ListQRTableViewController.m */,
-				4FF2396720B65344009923A7 /* AdminSanPhamTableViewCell.h */,
-				4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */,
-				4F49CCF520B5C3DE003CB574 /* AdminSanPhamTableViewController.h */,
-				4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */,
-				4F49CCF220B5C347003CB574 /* ThemSanPhamViewController.h */,
-				4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */,
-				4F0A93E320B7339100324F59 /* AdminPlan */,
-				4F0A93E420B7340600324F59 /* AdminNhanVien */,
-				4FC61CC0209B712F00BBC1CE /* AdminCustomerTableViewCell.h */,
-				4FC61CC1209B712F00BBC1CE /* AdminCustomerTableViewCell.m */,
-				4FC8D0FE20B463E100BA0203 /* Thua */,
-				4FC61CAE209B011E00BBC1CE /* TimePickerViewController.h */,
-				4FC61CAF209B011E00BBC1CE /* TimePickerViewController.m */,
-				4F2AF1552047EBC800B74CDE /* TableViewCell.xib */,
+				4FABEC9620D2E5FD0062A2A2 /* View */,
+				4FABEC9A20D2E98B0062A2A2 /* Server */,
 				4FB9758A204A306E00D1ECD0 /* Support */,
 				4F3057BA202E809A00374E80 /* Assets.xcassets */,
 				4F3057BC202E809A00374E80 /* LaunchScreen.storyboard */,
@@ -353,8 +350,6 @@
 		4F747F2A209082FE00F2BF6F /* DetailVC */ = {
 			isa = PBXGroup;
 			children = (
-				4F747F272090806500F2BF6F /* DetailCustomer2TableViewCell.h */,
-				4F747F282090806500F2BF6F /* DetailCustomer2TableViewCell.m */,
 				4F747F24209074F800F2BF6F /* DetaiCustomer2ViewController.h */,
 				4F747F25209074F800F2BF6F /* DetaiCustomer2ViewController.m */,
 			);
@@ -366,8 +361,6 @@
 			children = (
 				4F896AB8208D69EE00947D09 /* CustomerTableViewController.h */,
 				4F896AB9208D69EE00947D09 /* CustomerTableViewController.m */,
-				4F896ABE208D6A1300947D09 /* CustomerTableViewCell.h */,
-				4F896ABF208D6A1300947D09 /* CustomerTableViewCell.m */,
 				4FE2D0602091DEC60054063D /* AddVC */,
 				4F747F2A209082FE00F2BF6F /* DetailVC */,
 				4F896AD6208DC49000947D09 /* MapVC */,
@@ -380,7 +373,6 @@
 			children = (
 				4F625DC82050D948008F59BC /* QRScanViewController.h */,
 				4F625DCA2050D948008F59BC /* QRScanViewController.m */,
-				4F625DC92050D948008F59BC /* QRScanViewController.xib */,
 				4F896AC6208D802900947D09 /* GanQRViewController.h */,
 				4F896AC7208D802900947D09 /* GanQRViewController.m */,
 			);
@@ -392,12 +384,9 @@
 			children = (
 				4F896ACD208DB67600947D09 /* LocationCustomerViewController.h */,
 				4F896ACE208DB67600947D09 /* LocationCustomerViewController.m */,
-				4F896AD0208DC08D00947D09 /* PlanCustomAnnotation.h */,
-				4F896AD1208DC08D00947D09 /* PlanCustomAnnotation.m */,
-				4F896AD2208DC08E00947D09 /* PlanCustomAnnotationView.h */,
-				4F896AD3208DC08E00947D09 /* PlanCustomAnnotationView.m */,
 				4F49CCF820B5C806003CB574 /* AddLocationViewController.h */,
 				4F49CCF920B5C806003CB574 /* AddLocationViewController.m */,
+				4FABEC9420D2E5830062A2A2 /* Annotation */,
 			);
 			path = MapVC;
 			sourceTree = "<group>";
@@ -414,13 +403,273 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4FB9758A204A306E00D1ECD0 /* Support */ = {
+		4FABEC8020D2E1990062A2A2 /* AdminHome */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61C9C209A9EFE00BBC1CE /* AdminHomeViewController.h */,
+				4FC61C9D209A9EFE00BBC1CE /* AdminHomeViewController.m */,
+			);
+			path = AdminHome;
+			sourceTree = "<group>";
+		};
+		4FABEC8220D2E1F60062A2A2 /* EmployViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4FB9758C204A309E00D1ECD0 /* HomeVC */,
+				4FE2D05E2091DE780054063D /* PlanVC */,
+				4F896AC5208D7FC300947D09 /* QRScanVC */,
+			);
+			path = EmployViewController;
+			sourceTree = "<group>";
+		};
+		4FABEC8320D2E2520062A2A2 /* BaoCaoVC */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5977F20D275FC0042183B /* XemChiTietKeHoachViewController.h */,
+				4FF5978020D275FC0042183B /* XemChiTietKeHoachViewController.m */,
+				4FF5977C20D264340042183B /* DanhSachKeHoachBaoCaoViewController.h */,
+				4FF5977D20D264340042183B /* DanhSachKeHoachBaoCaoViewController.m */,
+				4F4A0BFB20C925E400CBE684 /* BaoCaoKhachHangViewController.h */,
+				4F4A0BFC20C925E400CBE684 /* BaoCaoKhachHangViewController.m */,
+				4F645F1020C06F8000356363 /* DanhSachBaoCaoTableViewController.h */,
+				4F645F1120C06F8000356363 /* DanhSachBaoCaoTableViewController.m */,
+				4F645F0D20C0666900356363 /* BaoCaoKeHoachViewController.h */,
+				4F645F0E20C0666900356363 /* BaoCaoKeHoachViewController.m */,
+			);
+			path = BaoCaoVC;
+			sourceTree = "<group>";
+		};
+		4FABEC8420D2E2730062A2A2 /* AdminQRVC */ = {
+			isa = PBXGroup;
+			children = (
+				4F0A93E820B735F500324F59 /* ListQRTableViewController.h */,
+				4F0A93E920B735F500324F59 /* ListQRTableViewController.m */,
+			);
+			path = AdminQRVC;
+			sourceTree = "<group>";
+		};
+		4FABEC8520D2E2B40062A2A2 /* AdminSanPhamVC */ = {
+			isa = PBXGroup;
+			children = (
+				4F49CCF520B5C3DE003CB574 /* AdminSanPhamTableViewController.h */,
+				4F49CCF620B5C3DE003CB574 /* AdminSanPhamTableViewController.m */,
+				4F49CCF220B5C347003CB574 /* ThemSanPhamViewController.h */,
+				4F49CCF320B5C347003CB574 /* ThemSanPhamViewController.m */,
+			);
+			path = AdminSanPhamVC;
+			sourceTree = "<group>";
+		};
+		4FABEC8620D2E3110062A2A2 /* TimeVC */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61CAE209B011E00BBC1CE /* TimePickerViewController.h */,
+				4FC61CAF209B011E00BBC1CE /* TimePickerViewController.m */,
+			);
+			path = TimeVC;
+			sourceTree = "<group>";
+		};
+		4FABEC8720D2E3680062A2A2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FABEC9B20D30DF60062A2A2 /* ChonSanPham */,
+				4FABEC9320D2E5580062A2A2 /* Customer */,
+				4FABEC9520D2E5A50062A2A2 /* DetailCustomer */,
+				4FABEC8F20D2E48D0062A2A2 /* Plan */,
+				4FABEC9020D2E49F0062A2A2 /* LoaiSanPham */,
+				4FABEC9120D2E4C60062A2A2 /* SanPhamGan */,
+				4FABEC9220D2E4D30062A2A2 /* DetailSanPhamGan */,
+				4FABEC8D20D2E42F0062A2A2 /* AdminNhanVien */,
+				4FABEC8C20D2E4190062A2A2 /* AdminPlan */,
+				4FABEC8B20D2E3F50062A2A2 /* BaoCaoKhachHang */,
+				4FABEC8A20D2E3C00062A2A2 /* AdminCustomer */,
+				4FABEC8920D2E3960062A2A2 /* AdminSanPham */,
+				4FABEC8820D2E37B0062A2A2 /* AdminHome */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4FABEC8820D2E37B0062A2A2 /* AdminHome */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61C9F209AA07600BBC1CE /* AdminHomeCollectionViewCell.h */,
+				4FC61CA0209AA07600BBC1CE /* AdminHomeCollectionViewCell.m */,
+			);
+			path = AdminHome;
+			sourceTree = "<group>";
+		};
+		4FABEC8920D2E3960062A2A2 /* AdminSanPham */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2396720B65344009923A7 /* AdminSanPhamTableViewCell.h */,
+				4FF2396820B65344009923A7 /* AdminSanPhamTableViewCell.m */,
+			);
+			path = AdminSanPham;
+			sourceTree = "<group>";
+		};
+		4FABEC8A20D2E3C00062A2A2 /* AdminCustomer */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61CC0209B712F00BBC1CE /* AdminCustomerTableViewCell.h */,
+				4FC61CC1209B712F00BBC1CE /* AdminCustomerTableViewCell.m */,
+			);
+			path = AdminCustomer;
+			sourceTree = "<group>";
+		};
+		4FABEC8B20D2E3F50062A2A2 /* BaoCaoKhachHang */ = {
+			isa = PBXGroup;
+			children = (
+				4F4A0BFE20C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.h */,
+				4F4A0BFF20C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.m */,
+			);
+			path = BaoCaoKhachHang;
+			sourceTree = "<group>";
+		};
+		4FABEC8C20D2E4190062A2A2 /* AdminPlan */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8D0FB20B456A800BA0203 /* AdminPlanTableViewCell.h */,
+				4FC8D0FC20B456A800BA0203 /* AdminPlanTableViewCell.m */,
+			);
+			path = AdminPlan;
+			sourceTree = "<group>";
+		};
+		4FABEC8D20D2E42F0062A2A2 /* AdminNhanVien */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61CBD209B6D9400BBC1CE /* NhanVienTableViewCell.h */,
+				4FC61CBE209B6D9400BBC1CE /* NhanVienTableViewCell.m */,
+			);
+			path = AdminNhanVien;
+			sourceTree = "<group>";
+		};
+		4FABEC8E20D2E4600062A2A2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4F409F712031338400E111B3 /* HomeCollectionViewCell.h */,
+				4F409F722031338400E111B3 /* HomeCollectionViewCell.m */,
+				4F409F732031338400E111B3 /* HomeCollectionViewCell.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4FABEC8F20D2E48D0062A2A2 /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				4FB97593204A383D00D1ECD0 /* PlanTableViewCell.h */,
+				4FB97594204A383D00D1ECD0 /* PlanTableViewCell.m */,
+			);
+			path = Plan;
+			sourceTree = "<group>";
+		};
+		4FABEC9020D2E49F0062A2A2 /* LoaiSanPham */ = {
+			isa = PBXGroup;
+			children = (
+				4F0AAB462092353600397ACC /* DanhSachLoaiSPTableViewCell.h */,
+				4F0AAB472092353600397ACC /* DanhSachLoaiSPTableViewCell.m */,
+			);
+			path = LoaiSanPham;
+			sourceTree = "<group>";
+		};
+		4FABEC9120D2E4C60062A2A2 /* SanPhamGan */ = {
+			isa = PBXGroup;
+			children = (
+				4FE2D05B2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.h */,
+				4FE2D05C2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m */,
+			);
+			path = SanPhamGan;
+			sourceTree = "<group>";
+		};
+		4FABEC9220D2E4D30062A2A2 /* DetailSanPhamGan */ = {
+			isa = PBXGroup;
+			children = (
+				4F0AAB492092447200397ACC /* DetailProductTableViewCell.h */,
+				4F0AAB4A2092447200397ACC /* DetailProductTableViewCell.m */,
+			);
+			path = DetailSanPhamGan;
+			sourceTree = "<group>";
+		};
+		4FABEC9320D2E5580062A2A2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				4F896ABE208D6A1300947D09 /* CustomerTableViewCell.h */,
+				4F896ABF208D6A1300947D09 /* CustomerTableViewCell.m */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		4FABEC9420D2E5830062A2A2 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				4F896AD0208DC08D00947D09 /* PlanCustomAnnotation.h */,
+				4F896AD1208DC08D00947D09 /* PlanCustomAnnotation.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		4FABEC9520D2E5A50062A2A2 /* DetailCustomer */ = {
+			isa = PBXGroup;
+			children = (
+				4F747F272090806500F2BF6F /* DetailCustomer2TableViewCell.h */,
+				4F747F282090806500F2BF6F /* DetailCustomer2TableViewCell.m */,
+			);
+			path = DetailCustomer;
+			sourceTree = "<group>";
+		};
+		4FABEC9620D2E5FD0062A2A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F2AF1552047EBC800B74CDE /* TableViewCell.xib */,
+				4F3057B4202E809900374E80 /* Main.storyboard */,
+				4F625DC92050D948008F59BC /* QRScanViewController.xib */,
+				4FABEC9820D2E6A10062A2A2 /* Annotation */,
+				4FABEC9720D2E65A0062A2A2 /* MBProgressHUD */,
+				4FABEC8720D2E3680062A2A2 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FABEC9720D2E65A0062A2A2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4FAD126B20CEC56000EE7DC4 /* MBProgressHUD.h */,
+				4FAD126A20CEC56000EE7DC4 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		4FABEC9820D2E6A10062A2A2 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				4F896AD2208DC08E00947D09 /* PlanCustomAnnotationView.h */,
+				4F896AD3208DC08E00947D09 /* PlanCustomAnnotationView.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		4FABEC9A20D2E98B0062A2A2 /* Server */ = {
 			isa = PBXGroup;
 			children = (
 				4F3057E6202E828300374E80 /* Server.h */,
 				4F3057E7202E828300374E80 /* Server.m */,
-				4F3057E9202EA09A00374E80 /* IndiViewController.h */,
-				4F3057EA202EA09A00374E80 /* IndiViewController.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		4FABEC9B20D30DF60062A2A2 /* ChonSanPham */ = {
+			isa = PBXGroup;
+			children = (
+				4FC61CA5209AB6A200BBC1CE /* ChonSanPhamTableViewCell.h */,
+				4FC61CA6209AB6A200BBC1CE /* ChonSanPhamTableViewCell.m */,
+			);
+			path = ChonSanPham;
+			sourceTree = "<group>";
+		};
+		4FB9758A204A306E00D1ECD0 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				4F3057AE202E809900374E80 /* AppDelegate.h */,
+				4F3057AF202E809900374E80 /* AppDelegate.m */,
+				4FF5977B20D24A130042183B /* Define.h */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -428,12 +677,13 @@
 		4FB9758B204A308900D1ECD0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4FABEC8620D2E3110062A2A2 /* TimeVC */,
+				4F896AC4208D7E9200947D09 /* CustomerVC */,
+				4FC61C9B209A9ED200BBC1CE /* AdminViewController */,
+				4FABEC8220D2E1F60062A2A2 /* EmployViewController */,
 				4FE2D05F2091DEA30054063D /* ChangePasswordVC */,
-				4FE2D05E2091DE780054063D /* PlanVC */,
 				4FB9758E204A30B900D1ECD0 /* LoginVC */,
-				4FB9758C204A309E00D1ECD0 /* HomeVC */,
 				4FB9758D204A30AF00D1ECD0 /* StaffVC */,
-				4F896AC5208D7FC300947D09 /* QRScanVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -443,9 +693,7 @@
 			children = (
 				4F409F6E2031330F00E111B3 /* HomeViewController.h */,
 				4F409F6F2031330F00E111B3 /* HomeViewController.m */,
-				4F409F712031338400E111B3 /* HomeCollectionViewCell.h */,
-				4F409F722031338400E111B3 /* HomeCollectionViewCell.m */,
-				4F409F732031338400E111B3 /* HomeCollectionViewCell.xib */,
+				4FABEC8E20D2E4600062A2A2 /* Home */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -473,17 +721,27 @@
 		4FC61C9B209A9ED200BBC1CE /* AdminViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4FC61C9C209A9EFE00BBC1CE /* AdminHomeViewController.h */,
-				4FC61C9D209A9EFE00BBC1CE /* AdminHomeViewController.m */,
-				4FC61C9F209AA07600BBC1CE /* AdminHomeCollectionViewCell.h */,
-				4FC61CA0209AA07600BBC1CE /* AdminHomeCollectionViewCell.m */,
+				4FABEC8020D2E1990062A2A2 /* AdminHome */,
+				4FABEC8320D2E2520062A2A2 /* BaoCaoVC */,
+				4FABEC8420D2E2730062A2A2 /* AdminQRVC */,
+				4FABEC8520D2E2B40062A2A2 /* AdminSanPhamVC */,
+				4F0A93E320B7339100324F59 /* AdminPlanVC */,
+				4F0A93E420B7340600324F59 /* AdminNhanVienVC */,
 			);
 			path = AdminViewController;
 			sourceTree = "<group>";
 		};
-		4FC8D0FE20B463E100BA0203 /* Thua */ = {
+		4FC8D0FE20B463E100BA0203 /* Err */ = {
 			isa = PBXGroup;
 			children = (
+				4F3057E9202EA09A00374E80 /* IndiViewController.h */,
+				4F3057EA202EA09A00374E80 /* IndiViewController.m */,
+				4F625DCD2050E139008F59BC /* ChiTietSanPhamViewController.h */,
+				4F625DCE2050E139008F59BC /* ChiTietSanPhamViewController.m */,
+				4FA1F4092060ED1100F6F898 /* BoLocTableViewController.h */,
+				4FA1F40A2060ED1100F6F898 /* BoLocTableViewController.m */,
+				4FA3C0BA20BAF2F800EB2654 /* ListQRViewController.h */,
+				4FA3C0BB20BAF2F800EB2654 /* ListQRViewController.m */,
 				4FC61CB7209B6CAB00BBC1CE /* AdminCustomerTableViewController.h */,
 				4FC61CB8209B6CAB00BBC1CE /* AdminCustomerTableViewController.m */,
 				4FC61CB4209B692200BBC1CE /* DanhSachKhachHangAllViewController.h */,
@@ -491,7 +749,7 @@
 				4FC61CB1209B688000BBC1CE /* DanhSachNhanVienViewController.h */,
 				4FC61CB2209B688000BBC1CE /* DanhSachNhanVienViewController.m */,
 			);
-			path = Thua;
+			path = Err;
 			sourceTree = "<group>";
 		};
 		4FE2D05E2091DE780054063D /* PlanVC */ = {
@@ -499,12 +757,8 @@
 			children = (
 				4FB9758F204A30F200D1ECD0 /* PlanViewController.h */,
 				4FB97590204A30F200D1ECD0 /* PlanViewController.m */,
-				4FB97593204A383D00D1ECD0 /* PlanTableViewCell.h */,
-				4FB97594204A383D00D1ECD0 /* PlanTableViewCell.m */,
 				4F0AAB432092293300397ACC /* DanhSachLoaiSPViewController.h */,
 				4F0AAB442092293300397ACC /* DanhSachLoaiSPViewController.m */,
-				4F0AAB462092353600397ACC /* DanhSachLoaiSPTableViewCell.h */,
-				4F0AAB472092353600397ACC /* DanhSachLoaiSPTableViewCell.m */,
 				4FE2D0612091DEE00054063D /* ProductQRVC */,
 			);
 			path = PlanVC;
@@ -531,14 +785,10 @@
 		4FE2D0612091DEE00054063D /* ProductQRVC */ = {
 			isa = PBXGroup;
 			children = (
-				4FE2D05B2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.h */,
-				4FE2D05C2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m */,
 				4FE2D0582091BE520054063D /* DanhSachSanPhamDaGanViewController.h */,
 				4FE2D0592091BE520054063D /* DanhSachSanPhamDaGanViewController.m */,
 				4F896AC1208D73D500947D09 /* DetailCustomerTableViewController.h */,
 				4F896AC2208D73D500947D09 /* DetailCustomerTableViewController.m */,
-				4F0AAB492092447200397ACC /* DetailProductTableViewCell.h */,
-				4F0AAB4A2092447200397ACC /* DetailProductTableViewCell.m */,
 			);
 			path = ProductQRVC;
 			sourceTree = "<group>";
@@ -691,34 +941,42 @@
 				4FB97596204A383D00D1ECD0 /* PlanTableViewCell.m in Sources */,
 				4FC61CAA209ABDD800BBC1CE /* ThemKeHoachViewController.m in Sources */,
 				4F747F26209074F800F2BF6F /* DetaiCustomer2ViewController.m in Sources */,
+				4F4A0BFD20C925E400CBE684 /* BaoCaoKhachHangViewController.m in Sources */,
 				4F0AAB4B2092447200397ACC /* DetailProductTableViewCell.m in Sources */,
 				4F747F2D2090834600F2BF6F /* ChangePasswordViewController.m in Sources */,
+				4FAD126C20CEC56000EE7DC4 /* MBProgressHUD.m in Sources */,
 				4FC61C9E209A9EFE00BBC1CE /* AdminHomeViewController.m in Sources */,
 				4F896ABA208D69EE00947D09 /* CustomerTableViewController.m in Sources */,
 				4F49CCFA20B5C806003CB574 /* AddLocationViewController.m in Sources */,
 				4FE2D05A2091BE520054063D /* DanhSachSanPhamDaGanViewController.m in Sources */,
 				4F3057B9202E809A00374E80 /* Kmanager.xcdatamodeld in Sources */,
+				4FF5977E20D264340042183B /* DanhSachKeHoachBaoCaoViewController.m in Sources */,
 				4FC61CBF209B6D9400BBC1CE /* NhanVienTableViewCell.m in Sources */,
 				4F3057B3202E809900374E80 /* ViewController.m in Sources */,
 				4FA1F40B2060ED1100F6F898 /* BoLocTableViewController.m in Sources */,
 				4F3057C1202E809A00374E80 /* main.m in Sources */,
+				4FA3C0BC20BAF2F800EB2654 /* ListQRViewController.m in Sources */,
 				4F625DCC2050D948008F59BC /* QRScanViewController.m in Sources */,
 				4FC61CB3209B688000BBC1CE /* DanhSachNhanVienViewController.m in Sources */,
 				4F2AF1562047EBC800B74CDE /* TableViewCell.m in Sources */,
 				4F625DCF2050E139008F59BC /* ChiTietSanPhamViewController.m in Sources */,
 				4F0AAB452092293300397ACC /* DanhSachLoaiSPViewController.m in Sources */,
+				4F645F0F20C0666900356363 /* BaoCaoKeHoachViewController.m in Sources */,
 				4F49CCEE20B5C1A5003CB574 /* ThemNhanVienViewController.m in Sources */,
 				4FE2D05720917D630054063D /* AddCustomerViewController.m in Sources */,
 				4FC61CAD209AC2B400BBC1CE /* SanPhamObj.m in Sources */,
 				4FE2D05D2091BF680054063D /* DanhSachSanPhamDaGanTableViewCell.m in Sources */,
 				4FC61CC5209BFC8800BBC1CE /* AminPlanViewController.m in Sources */,
 				4FC61CB6209B692200BBC1CE /* DanhSachKhachHangAllViewController.m in Sources */,
+				4F4A0C0020C9322000CBE684 /* BaoCaoKhachHangSanPhamTableViewCell.m in Sources */,
 				4F747F292090806500F2BF6F /* DetailCustomer2TableViewCell.m in Sources */,
 				4F409F742031338400E111B3 /* HomeCollectionViewCell.m in Sources */,
+				4F645F1220C06F8000356363 /* DanhSachBaoCaoTableViewController.m in Sources */,
 				4F0A93EA20B735F500324F59 /* ListQRTableViewController.m in Sources */,
 				4F896AD5208DC08E00947D09 /* PlanCustomAnnotationView.m in Sources */,
 				4F49CCF720B5C3DE003CB574 /* AdminSanPhamTableViewController.m in Sources */,
 				4F3057B0202E809900374E80 /* AppDelegate.m in Sources */,
+				4FF5978120D275FC0042183B /* XemChiTietKeHoachViewController.m in Sources */,
 				4FB97591204A30F200D1ECD0 /* PlanViewController.m in Sources */,
 				4FF2396920B65344009923A7 /* AdminSanPhamTableViewCell.m in Sources */,
 				4FC61CB9209B6CAB00BBC1CE /* AdminCustomerTableViewController.m in Sources */,
@@ -992,7 +1250,7 @@
 				4F3057D9202E809A00374E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4F3057DA202E809A00374E80 /* Build configuration list for PBXNativeTarget "Kmanager" */ = {
 			isa = XCConfigurationList;
@@ -1001,7 +1259,7 @@
 				4F3057DC202E809A00374E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4F3057DD202E809A00374E80 /* Build configuration list for PBXNativeTarget "KmanagerTests" */ = {
 			isa = XCConfigurationList;
@@ -1010,7 +1268,7 @@
 				4F3057DF202E809A00374E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4F3057E0202E809A00374E80 /* Build configuration list for PBXNativeTarget "KmanagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -1019,7 +1277,7 @@
 				4F3057E2202E809A00374E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

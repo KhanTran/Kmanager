@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "HomeViewController.h"
+#import "AdminHomeViewController.h"
 @interface ViewController ()
 {
     NSUserDefaults *userdefaults;
@@ -43,8 +44,12 @@
 
 
 - (IBAction)dangNhapBtnPressed:(id)sender {
+    [[Server sharedServer] showAnimation:self.view];
+
     [[Server sharedServer] loginWithUsername:_taiKhoanTF.text pass:_matKhauTF.text idcongty:_maCongTyTF.text completion:^(NSError *error, NSDictionary *data)
      {
+         [[Server sharedServer] hideAnimation:self.view];
+
          if (error == nil) {
              NSLog(@"Login success! \n ----------------------------------\n %@", data);
              NSInteger status = [[data objectForKey:@"status"] integerValue];
@@ -61,11 +66,15 @@
                  [[NSUserDefaults standardUserDefaults] setObject:[_dicThongTinTaiKhoan objectForKey:@"_id"] forKey:@"idnhanvien"];
                  if ([[dic objectForKey:@"isadmin"] boolValue] == true) {
                      [self performSegueWithIdentifier:@"loginAdminIdentifier" sender:nil];
+                     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isAdmin"];
+
 
                  }
                  else
                  {
                      [self performSegueWithIdentifier:@"loginIdentifier" sender:nil];
+                     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isAdmin"];
+
 
                  }
              }
@@ -100,6 +109,10 @@
     if ([[segue identifier] isEqualToString:@"loginIdentifier"]) {
         HomeViewController *vc = [(UINavigationController*)[segue destinationViewController] topViewController];
         vc.arrMenu = _arrChucNang;
+        vc.dicThongTinTaiKhoan = _dicThongTinTaiKhoan;
+    }
+    if ([[segue identifier] isEqualToString:@"loginAdminIdentifier"]) {
+        AdminHomeViewController *vc = [(UINavigationController*)[segue destinationViewController] topViewController];
         vc.dicThongTinTaiKhoan = _dicThongTinTaiKhoan;
     }
 }
