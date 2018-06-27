@@ -677,13 +677,13 @@
 		4FB9758B204A308900D1ECD0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4FABEC8620D2E3110062A2A2 /* TimeVC */,
+				4FB9758E204A30B900D1ECD0 /* LoginVC */,
+				4FB9758D204A30AF00D1ECD0 /* StaffVC */,
 				4F896AC4208D7E9200947D09 /* CustomerVC */,
 				4FC61C9B209A9ED200BBC1CE /* AdminViewController */,
 				4FABEC8220D2E1F60062A2A2 /* EmployViewController */,
 				4FE2D05F2091DEA30054063D /* ChangePasswordVC */,
-				4FB9758E204A30B900D1ECD0 /* LoginVC */,
-				4FB9758D204A30AF00D1ECD0 /* StaffVC */,
+				4FABEC8620D2E3110062A2A2 /* TimeVC */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

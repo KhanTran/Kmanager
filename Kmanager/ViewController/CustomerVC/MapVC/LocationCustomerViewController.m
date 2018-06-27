@@ -212,9 +212,9 @@
 -(void)requestCustomer
 {
     NSString *url = [NSString stringWithFormat:@"%@customer?idlogin=%@", ServerApi, [[NSUserDefaults standardUserDefaults] objectForKey:@"idnhanvien"]];
-    [[Server sharedServer] showAnimation:self.view];
+//    [[Server sharedServer] showAnimation:self.view];
     [[Server sharedServer]getData:url completion:^(NSError *error, NSDictionary *data) {
-        [[Server sharedServer] hideAnimation:self.view];
+//        [[Server sharedServer] hideAnimation:self.view];
 
         if (error == nil) {
             NSInteger status = [[data objectForKey:@"status"] integerValue];

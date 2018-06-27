@@ -33,9 +33,6 @@
 - (void)setPlanImageWithMarkerIndex:(NSInteger)isStore {
     UIImage *markerImg;
     markerImg = [UIImage imageNamed:[NSString stringWithFormat:@"cuahang.png"]];
-
-    
-    
     CGFloat width = HeightWith;
     CGFloat height = HeightWith;
     CGFloat oriX = self.center.x - width/2;
